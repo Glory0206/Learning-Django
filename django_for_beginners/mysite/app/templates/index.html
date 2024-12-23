@@ -1,0 +1,13 @@
+<html>
+    <style>
+        body{background-color: blue;}
+    </style>
+    <body>
+        <h1>Post List</h1>
+        {% for post in post_list %}
+            <div>
+                {{post.id}}. {{post.title}}
+            </div>
+        {% endfor %}
+    </body>
+</html>
