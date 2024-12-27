@@ -1,10 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpRequest, HttpResponse
 from django.views.generic.edit import CreateView
 from app.models import Post
 from app.forms import PostForm
 
-# Create your views here.
+@login_required
 def index(request: HttpRequest) -> HttpRequest:
     qs = Post.objects.all()
 
